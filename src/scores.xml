@@ -1,0 +1,98 @@
+<Competition name='2015 Rugby World Cup'>
+	<Teams>
+		<Team id="ENG" name="England" />
+		<Team id="FIJ" name="Fiji" />
+		<Team id="TON" name="Tonga" />
+		<Team id="GEO" name="Georgia" />
+		<Team id="IRE" name="Ireland" />
+		<Team id="CAN" name="Canada" />
+		<Team id="SA" name="South Africa" />
+		<Team id="JAP" name="Japan" />
+		<Team id="FRA" name="France" />
+		<Team id="ITA" name="Italy" />
+		<Team id="SAM" name="Samoa" />
+		<Team id="USA" name="USA" />
+		<Team id="WAL" name="Wales" />
+		<Team id="URU" name="Uruguay" />
+		<Team id="NZ" name="New Zealand" color='black'/>
+		<Team id="ARG" name="Argentina" />
+		<Team id="SCO" name="Scotland" />
+		<Team id="AUS" name="Australia" color='darkgreen'/>
+		<Team id="ROM" name="Romania" />
+		<Team id="NAM" name="Namibia" />
+	</Teams>
+	<Games>
+		<Group name='Pool A'>
+			<Game name='Match 01'>
+				<Score id='ENG' score='35'/>
+				<Score id='FIJ' score='11'/>
+			</Game>
+			<Game name='Match 07'>
+				<Score id='WAL' score='54'/>
+				<Score id='URU' score='9'/>
+			</Game>
+			<Game name='Match 10'>
+				<Score id='AUS' score='28'/>
+				<Score id='FIJ' score='13'/>
+			</Game>
+			<Game name='Match 16'>
+				<Score id='ENG' score='25'/>
+				<Score id='WAL' score='28'/>
+			</Game>
+		</Group>
+		<Group name='Pool B'>
+			<Game name='Match 04'>
+				<Score id='SA' score='32'/>
+				<Score id='JAP' score='34'/>
+			</Game>
+			<Game name='Match 06'>
+				<Score id='SAM' score='25'/>
+				<Score id='USA' score='16'/>
+			</Game>
+			<Game name='Match 09'>
+				<Score id='SCO' score='45'/>
+				<Score id='JAP' score='10'/>
+			</Game>
+			<Game name='Match 15'>
+				<Score id='SA' score='46'/>
+				<Score id='SAM' score='6'/>
+			</Game>
+		</Group>
+		<Group name='Pool C'>
+			<Game name='Match 02'>
+				<Score id='TON' score='10'/>
+				<Score id='GEO' score='17'/>
+			</Game>
+			<Game name='Match 08'>
+				<Score id='NZ' score='26'/>
+				<Score id='ARG' score='16'/>
+			</Game>
+			<Game name='Match 12'>
+				<Score id='NZ' score='58'/>
+				<Score id='NAM' score='14'/>
+			</Game>
+			<Game name='Match 13'>
+				<Score id='ARG' score='54'/>
+				<Score id='GEO' score='9'/>
+			</Game>
+		</Group>
+		<Group name='Pool D'>
+			<Game name='Match 03'>
+				<Score id='IRE' score='50'/>
+				<Score id='CAN' score='7'/>
+			</Game>
+			<Game name='Match 05'>
+				<Score id='FRA' score='32'/>
+				<Score id='ITA' score='10'/>
+			</Game>
+			<Game name='Match 11'>
+				<Score id='FRA' score='38'/>
+				<Score id='ROM' score='11'/>
+			</Game>
+			<Game name='Match 14'>
+				<Score id='ITA' score='23'/>
+				<Score id='CAN' score='18'/>
+			</Game>
+		</Group>
+	</Games>
+</Competition>
