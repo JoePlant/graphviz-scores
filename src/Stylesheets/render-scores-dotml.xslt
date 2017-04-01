@@ -20,6 +20,8 @@
 
 	<xsl:include href='include-graphs-colours.xslt'/>
 	
+	<xsl:variable name='newline'>\n</xsl:variable>
+
 	
 	<xsl:template match="/" >
 		<xsl:apply-templates select="/Competition"/>
@@ -42,7 +44,13 @@
 				<xsl:otherwise><xsl:value-of select='$team-color'/></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		<dotml:node id="{@id}" style="solid" shape="box" label='{@name}' fillcolor='{$back-color}' color="{$color}" 
+		<xsl:variable name='fillcolor'>
+			<xsl:choose>
+				<xsl:when test='@fillcolor'><xsl:value-of select='@fillcolor'/></xsl:when>
+				<xsl:otherwise><xsl:value-of select='$back-color'/></xsl:otherwise>
+			</xsl:choose>
+		</xsl:variable>
+		<dotml:node id="{@id}" style="filled" shape="box" label='{@name}' fillcolor='{$fillcolor}' color="{$color}" 
 				fontname="{$fontname}" fontsize="{$font-size-h2}" fontcolor="{$color}" />
 	</xsl:template>
 
@@ -64,7 +72,17 @@
 	</xsl:template>
 	
 	<xsl:template match="Game" mode="node">
-		<dotml:node id="{@game-id}" style="solid" shape="box" label='{@name}' fillcolor='{$back-color}' color="{$game-color}" 
+		<xsl:variable name='winner' select="Score[@result='winner']"/>
+		<xsl:variable name='loser' select="Score[@result='loser']"/>
+		<xsl:variable name='draw' select="Score[@result='draw']"/>
+		<xsl:variable name='text'>
+			<xsl:value-of select='@group'/>
+			<xsl:value-of select='$newline'/>
+			<xsl:value-of select='($winner|$draw)/@score'/>
+			<xsl:text>-</xsl:text>
+			<xsl:value-of select='($loser|$draw)/@score'/>
+		</xsl:variable>
+		<dotml:node id="{@game-id}" style="solid" shape="box" label='{$text}' fillcolor='{$back-color}' color="{$game-color}" 
 				fontname="{$fontname}" fontsize="{$font-size-h3}" fontcolor="{$game-color}" />
 	</xsl:template>
 	

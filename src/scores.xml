@@ -17,7 +17,7 @@
 		<Team id="NZ" name="New Zealand" color='black'/>
 		<Team id="ARG" name="Argentina" />
 		<Team id="SCO" name="Scotland" />
-		<Team id="AUS" name="Australia" color='darkgreen'/>
+		<Team id="AUS" name="Australia" fillcolor='gold' color='darkgreen'/>
 		<Team id="ROM" name="Romania" />
 		<Team id="NAM" name="Namibia" />
 	</Teams>

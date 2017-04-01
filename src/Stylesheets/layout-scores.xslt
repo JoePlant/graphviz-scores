@@ -7,6 +7,8 @@
 	<xsl:variable name='quote'>"</xsl:variable>
 	<xsl:variable name='newline'>\n</xsl:variable>
 	
+	<xsl:variable name='include-score'>y</xsl:variable>
+	
 	<xsl:key name='games-by-team' match='Game' use='Score/@id'/>
 	<xsl:key name='teams-by-id' match='Team' use='@id'/>
 	
@@ -42,10 +44,7 @@
 	</xsl:template>
 	
 	<xsl:template match='Game'>
-		<xsl:variable name='name'>
-			<xsl:value-of select='concat(../@name, $newline, @name)'/>
-		</xsl:variable>
-		<Game game-id='G_{generate-id()}' name='{$name}'>
+		<Game game-id='G_{generate-id()}' group='{../@name}' name='{@name}'>
 			<xsl:apply-templates select='Score'/>
 		</Game>
 	</xsl:template>
