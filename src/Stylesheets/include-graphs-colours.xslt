@@ -14,6 +14,7 @@
 	<xsl:variable name="focus-text-color">#FFFFFF</xsl:variable>
 	<xsl:variable name="other-color">#333333</xsl:variable>
 -->
+	<xsl:variable name="pool-color">silver</xsl:variable>
 	<xsl:variable name="team-color">blue</xsl:variable>
 	<xsl:variable name="game-color">grey</xsl:variable>
 	<xsl:variable name="back-color">#EEEEEE</xsl:variable>

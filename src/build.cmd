@@ -1,6 +1,8 @@
 rem @echo off
-set scores=scores.xml
-set output=Output
+rem set scores=scores.xml
+rem set scores=scores-waterpolo.xml
+set scores=scores-16B.xml
+set output=Output\16B
 
 if EXIST Working goto Working_exists
 mkdir Working
@@ -19,5 +21,6 @@ rem %nxslt% Working\scores-layout.xml  Stylesheets\extract-link-data.xslt -o Wor
 
 %nxslt% Working\scores-layout.xml StyleSheets\render-scores-dotml.xslt -o Working\scores.dotml
 %nxslt% Working\scores.dotml %dotml%\dotml2dot.xsl -o "Working\scores.gv" 
+%graphviz%\dot.exe -Tsvg "Working\scores.gv"  -o "%output%\scores.svg"
 %graphviz%\dot.exe -Tpng "Working\scores.gv"  -o "%output%\scores.png"
-
+pause
