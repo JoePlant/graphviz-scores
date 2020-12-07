@@ -1,8 +1,10 @@
 rem @echo off
-rem set scores=scores.xml
+set scores=scores.xml
 rem set scores=scores-waterpolo.xml
-set scores=scores-16B.xml
-set output=Output\16B
+rem set scores=scores-16B.xml
+
+set output=Output
+rem set output=Output\16B
 
 if EXIST Working goto Working_exists
 mkdir Working
